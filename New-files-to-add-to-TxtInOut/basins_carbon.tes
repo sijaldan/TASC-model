@@ -1,0 +1,64 @@
+Governing parameters for terrestiral carbon cycling
+!Miscellaneous
+             1.5       !er_POC_para     =	POC enrichment ratio      ! 0-10       ! 0.0-5.0           MOST SENSITIVE  
+            0.42       !CFB_para	=	Carbon fraction of residue (0.42; from data of Pinck et al., 1950) 
+            0.05       !Sf_para_sur	=	Fraction of mineral N sorbed to litter: 0.05 for surface litter, 0.1 for belowground litter
+            0.10       !Sf_para_sub	=	Fraction of mineral N sorbed to litter: 0.05 for surface litter, 0.1 for belowground litter
+!Dissovled carbon
+      Calculated       !ABL_para 	=	Carbon allocation from Microbial Biomass to Leaching.			
+            0.95       !peroc_DIC_para	=	DIC percolation coefficient !! 0-1  
+            0.70       !peroc_DOC_para	=	DOC percolation coefficient	!! 0-1
+            4000       !part_DOC_para   =	organic carbon partition coefficient, basin sacle parameter, 1000 to 1200	     !! 500-2000 !	!!replacing KOC 	=	Liquid-solid partition coefficient for Microbial Biomass (10^3 m3 Mg-1)
+            50.0       !hlife_doc_para	=	DOC half life (days) in groudwater, calculating DOC decay in groundwater !! 0-100     !
+!Allocation of CO2 and Carbon transformation
+	     0.6       !ABCO2_para_sur ABCO2	=	Allocation from Microbial Biomass C pool to CO2; 0.6 (surface Litter), 0.85 - 0.68 × (CLAY+SILT) (all other layers) (Parton et al., 1993, 1994)
+      Calculated       !ABCO2_para_sub ABCO2	=	Allocation from Microbial Biomass C pool to CO2; 0.6 (surface Litter), 0.85 - 0.68 × (CLAY+SILT) (all other layers) (Parton et al., 1993, 1994)
+	     0.0       !ABP_para_sur	=	Allocation from Biomass to passive Humus; 0 (surface Litter), 0.003 + 0.032 x SOL_CLAY (all other layers) (Parton et al., 1993, 1994)
+      Calculated       !ABP_para_sub	=	Allocation from Biomass to passive Humus; 0 (surface Litter), 0.003 + 0.032 x SOL_CLAY (all other layers) (Parton et al., 1993, 1994)
+             0.6       !ALMCO2_para_sur	=	Allocation from metabolic Litter to CO2; 0.6 (surface Litter), 0.55 (all other layers) (Parton et al., 1993, 1994)
+            0.55       !ALMCO2_para_sub	=	Allocation from metabolic Litter to CO2; 0.6 (surface Litter), 0.55 (all other layers) (Parton et al., 1993, 1994)
+             0.6       !ALSLNCO2_para_sur	=	Allocation from non-lignin of structural Litter to CO2; 0.6 (surface Litter), 0.55 (all other layers) (Parton et al., 1993, 1994)
+            0.55       !ALSLNCO2_para_sub	=	Allocation from non-lignin of structural Litter to CO2; 0.6 (surface Litter), 0.55 (all other layers) (Parton et al., 1993, 1994)
+             0.0       !ASP_para_sur	=	Allocation from slow Humus to passive; 0 (surface Litter), 0.003 + 0.00009 × CLAF (all other layers) (Parton et al., 1993, 1994)
+      Calculated       !ASP_para_sub	=	Allocation from slow Humus to passive; 0 (surface Litter), 0.003 + 0.00009 × CLAF (all other layers) (Parton et al., 1993, 1994)
+             0.3       !ALSLCO2_para	=	Allocation from lignin of structural Litter to CO2; 0.3 (Parton et al., 1993, 1994)
+            0.55       !APCO2_para	=	Allocation from passive Humus to CO2; 0.55 (Parton et al., 1993, 1994)
+            0.55       !ASCO2_para	=	Allocation from slow Humus to CO2; 0.55 (Parton et al., 1993, 1994)
+!decomposition rates
+             1.0       !PRMT_51_para    =	COEF ADJUSTS MICROBIAL ACTIVITY FUNCTION IN TOP SOIL LAYER (0.1_1.),
+           0.003       !PRMT_45_para    =	COEF IN CENTURY EQ ALLOCATING SLOW TO PASSIVE HUMUS(0.001_0.05) ORIGINAL VALUE = 0.003, ASP=MAX(.001,PRMT_45-.00009*sol_clay(k,j)), ASP=MAX(.001,PRMT_45+.009*sol_clay(k,j)/100)
+	  0.0164       !BMR_para_sur 	=	Rate of transformation of microbial Biomass and associated products under optimal conditions (surface = 0.0164 d-1; all other layers = 0.02 d-1) (Parton et al., 1993, 1994)
+	    0.02       !BMR_para_sub 	=	Rate of transformation of microbial Biomass and associated products under optimal conditions (surface = 0.0164 d-1; all other layers = 0.02 d-1) (Parton et al., 1993, 1994)
+        0.000012       !HPR_para 	=	Rate of transformation of passive Humus under optimal conditions (subsurface layers = 0.000012 d-1) (Parton et al., 1993, 1994)
+        0.000548       !HSR_para 	=	Rate of transformation of slow Humus under optimal conditions (all layers = 0.0005 d-1) (Parton et al., 1993, 1994; Vitousek et al., 1993)
+          0.0405       !LMR_para_sur	=	Rate of transformation of metabolic Litter under optimal conditions (surface = 0.0405 d-1; all other layers = 0.0507 d-1) (Parton et al., 1994)
+          0.0507       !LMR_para_sub	=	Rate of transformation of metabolic Litter under optimal conditions (surface = 0.0405 d-1; all other layers = 0.0507 d-1) (Parton et al., 1994)
+          0.0107       !LSR_para_sur	=	Rate of potential transformation of structural Litter under optimal conditions (surface = 0.0107 d-1; all other layers = 0.0132 d-1) (Parton et al., 1994)
+          0.0132       !LSR_para_sub	=	Rate of potential transformation of structural Litter under optimal conditions (surface = 0.0107 d-1; all other layers = 0.0132 d-1) (Parton et al., 1994)
+!Soil texutre controls of microbioa activity
+             1.0       !XBM_para_sur 	=	Control on transformation of microbial Biomass by soil texture and structure. Its values: surface Litter layer = 1; all other layers = 1 – 0.75 × (SILT + CLAY) (Parton et al., 1993, 1994)
+      Calculated       !XBM_para_sub 	=	Control on transformation of microbial Biomass by soil texture and structure. Its values: surface Litter layer = 1; all other layers = 1 – 0.75 × (SILT + CLAY) (Parton et al., 1993, 1994)
+      Calculated       !XLSLF_para	=	Control on potential transformation of structural Litter by lignin fraction of structural Litter [XLSLF = exp(-3 × LSLF) (Parton et al., 1993, 1994)]
+!Oxygen factor control parameters
+            10.0       !OX_aa_para 	=	Cofficient in calcualting oxygen factor 
+           0.035       !OX_bb_para 	=	Cofficient in calcualting oxygen factor 
+!!Other Derived
+                       !ASX=1.-ASCO2-ASP 	=	Slow to Microbial Biomass
+                       !(1.-ABP-ABCO2)*NCHS 	=    	Biomass to Slow
+                       !APX=1.-APCO2		=	APX: Passive to Microbial Biomass
+                       !(1.0 - ALMCO2)		=	Metabolic to S1 (Biomass)
+		       !LMF	=	Fraction of the Litter that is metabolic 
+                       !LMNF	=	Fraction of metabolic Litter that is N (kg kg-1)
+                       !LSF	=	Fraction of the Litter that is structural 
+                       !LSLF	=	Fraction of structural Litter that is lignin (kg kg-1)  
+                       !LSNF	=	Fraction of structural Litter that is N (kg kg-1)
+                       !NCBM 	=	N/C ratio of newly formed Microbial Biomass
+                       !NCHP 	=	N/C ratio of newly formed passive Humus
+                       !NCHS 	= 	N/C ratio of newly formed slow Humus
+
+
+
+
+
+
+

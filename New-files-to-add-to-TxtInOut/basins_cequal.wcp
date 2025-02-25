@@ -1,0 +1,31 @@
+Riverine water column water quality parameters from CEQUAL
+LPOC parameters
+             0.1       |f_lpp	=	fraction of algal mortality into LPOC
+             0.1       |f_lpb	=	fraction of bottom algal mortality into LPOC
+             0.4       |rca	=	algal carbon to biomass ratio
+             2.5       |sv_lp	=	LPOC settling velocity (m/day)
+           0.075       |klp	=	LPOC dissolution rate (/day) LPOC->LDOC
+            0.08       |kd_lp	=	LPOC decay rate to DIC (/day) LPOC->DIC
+            0.01       |klrp	=	decay rate of LPOC to RPOC (/day) LPOC->RPOC
+RPOC parameters
+             0.8       |f_rpp	=	fraction of algal mortality into RPOC
+             0.8       |f_rpb	=	fraction of bottom algal mortality into RPOC
+             2.5       |sv_rp	=	RPOC settling velocity (m/day)
+          0.0025       |krp	=	RPOC dissolution rate (/day) RPOC->LDOC
+           0.001       |kd_rp	=	RPOC decay rate to DIC (/day) RPOC->DIC
+LDOC parameters
+            0.05       |f_ldp	=	fraction of algal mortality into LDOC
+            0.05       |f_ldb	=	fraction of bottom algal mortality into LDOC
+            0.25       |kld	=	LDOC mineralization rate (/day)    LDOC->DIC !!
+             1.0       |ksdocf	=	half-saturation oxygen attenuation for DOC oxidation (mgO2/L)
+            0.01       |klrd	=	decay rate of LDOC to RDOC (/day) LDOC->RDOC
+           0.002       |kdnit	=	NO3 denitrification rate (/day) LDOC consumned
+             0.1       |ksoxdn	=	half-saturation oxygen attenuation for denitrification (mgO2/L)
+RDOC parameters
+           0.006       |krd	=	RDOC mineralization rate (/day) RDOC->DIC  !!
+DIC parameters
+             0.2       |f_co2	=	fraction of DIC in CO2
+           391.0       |p_co2	=	partial pressure of CO2 (ppm,parts per million)
+Sediment parameters
+            0.02       |ksed	=	first-order sediment decay rate (/day)
+            0.05       |kbur	= 	first-order sediment burial rate (/day)

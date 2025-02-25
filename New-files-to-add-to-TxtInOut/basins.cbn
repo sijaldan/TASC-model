@@ -1,0 +1,60 @@
+Basin data           .bsn file 12/7/2017 12:00:00 AM ArcSWAT 2012.10_3.19
+Modeling Options: (Only option 2 is active)
+               2    | CSWAT		: options avaialbe include 2, 3, and 4. Currently only option 2 is active.
+Soil Profile Standardization:
+               1    | soil_layer_std	: 0 = original soil layer; 1 = match soil properties to the standardized soil layers: 10 mm, 100 mm, 200 mm, 300 mm, 400 mm, 500 mm, 600 mm, 700 mm, 800 mm, 900 mm, 1000 mm, 1200 mm, 1400 mm, 1600 mm, 1800 mm, 2000 mm, 3000 mm, 4000 mm, 5000 mm, 6000 mm, a total of 21 layers
+Weather Input: (only daily is active, please do not choose hourly for iwea)
+               0    | iwea		: 0 = daily weather input; 1=hourly weather input
+               0    | idh 		: 0 = do not calculate hourly weather from daily weather input; 1 = calculate hourly weather from daily weather input
+              24    | nstep1  		: hourly weather used for either (iwea=0 and idh=1) or (iwea=1 and idh=0)
+              60    | idt1   		: minutes used for either (iwea=0 and idh=1) or (iwea=1 and idh=0)
+Temperature:          
+               1    | tswat 		: 0 = original empericaly soil temperature module; 1 = heat balance based module
+               0    | iwtmp_sub 	: 0 = temperature index module; 1= Ficilin's subbasin water temperaute module; 2= Qi's subbasin water temperature module
+               0    | iwtmp_rch 	: 0 = temperature index stream temperature module; 1 = equilibrium stream temperature module
+Nitrogen:          
+               1    | nswat 		: 0 = original  nitrification and denitrification module;  1 = other modules
+               2    | denit_method  	: 0 = original SWAT algorithm; 1= Daycent used by Yang et al 2017; 2 = Wagena et al 2017 based on respc CO2; 3 = no denitrication; 4 = Wagena et al 2017 based on soil C mass (as descripbed in Wagena); 5 = Century (Parton et al., 1996)
+               6    | denit_n2o_method  : 1 = Yang et al 2017; 2= Daycent (Fang et al 2015); 3 = NOE model  (Fang et al 2015); 4 = WNMM model (Fang et al 2015); 5 = FASSET model (Fang et al 2015); 6 = Wagena et al 2017 based on respc CO2; 7 = Wagena et al 2017 based on soil C mass (as descripbed in Wagena)
+               1    | denit_no_method  	: 0 = no NO calculation; 1= Yang et al 2017; 2= DAYCENT used by Fang, et al. 2015
+               3    | nit_method  	: 0 = original SWAT algorithm; 1 = Daycent used by Yang et al 2017; 2 = no nitrification； 3 = Wagena et al 2017; 4 = Century (Parton et al., 1996)
+               6    | nit_N2O_method  	: 1 = Yang et al 2017; 2 = Daycent (Fang et al 2015); 3 = NOE model (Fang et al 2015); 4 = WNMM model (Fang et al 2015); 5 = FASSET model (Fang et al 2015); 6 = Wagena et al 2017; 7 = CLM4.5 (Li et al., 2000; Fu et al 2018); 8 = calibration; 9 = Century (Parton et al., 2001) 
+               1    | nit_NO_method   	: 0 = no NO calculation; 1 = Yang et al 2017; 2 = DAYCENT used by (Fang, et al. 2015)
+               0    | Inhibday 		: urease inhibitor effective days (if=0, no inhibitor applied)
+              10    | Inhibdu		: max days of urease inhibitor affects 
+Reach/Reservoir: (only daily time step is active)
+               0    | ievent_rch  	: 0 = daily time step; 1 = subdaily time step
+               1    | nstep_rch 	: subdaily time step   1440 = 1 min; 144 = 10 min; 48 = 30 min; 24 = hourly; 12 = 2 hours; 6 = 4 hours; 4 = 6 hours; 2 = 12 hours; 1 = daily; 
+               0    | irch_SedFlux 	: 1 = simulating sediment flux
+               0    | irch_SedResusp 	: 1 = simulating sediment resuspension flux induced nutrient flux
+               0    | ires_SedFlux 	: 1 = simulating sediment flux
+               0    | ires_SedResusp 	: 1 = simulating sediment resuspension flux induced nutrient flux
+Factors affecting decompostion of SOM
+               4     | idc_till		: tilliage factor (1 = DSSAT; 2 = EPIC; 3 = Armen; 4 = DNDC)
+               2     | idc_sw		: soil water factor (1 = Century; 2 = Armen)y
+               2     | idc_tmp		: temperature factor (1 = EPIC; 2 = Armen; 3 = SWAT)
+             0.5     | tillagef		: tillage factor used when idc_till = 3. Note that, this factor is updated for each layer and each day
+CO2 Input:
+               0    | ico2 		: 0 = using default CO2 value; 1 = reading in co2 concentration.    NOTE: need co2.dat file if option 1 is selected.
+Forest Modeling:
+               0    | ifor 		: 0 = default forestry module; 1 = Yang et al 2019 forestry module.    NOTE: need updataed plant.dat file 
+Print Options: (rch2,...,rch7 and res2,...,res7 are not active)
+               0    | rch_std  		: 1 = print out rch variables in output.std; 0 = no print out 
+               1    | rch2  		: 1 = print out output.rch2; 0= no print out 
+               0    | rch3  		: 1 = print out output.rch3; 0= no print out 
+               0    | rch4  		: 1 = print out output.rch4; 0= no print out 
+               0    | rch5  		: 1 = print out output.rch5; 0= no print out 
+               0    | rch6  		: 1 = print out output.rch6; 0= no print out 
+               0    | rch7  		: 1 = print out output.rch7; 0= no print out 
+               0    | res2  		: 1 = print out output.res2; 0= no print out 
+               0    | res3  		: 1 = print out output.res3; 0= no print out 
+               0    | res4  		: 1 = print out output.res4; 0= no print out 
+               0    | res5  		: 1 = print out output.res5; 0= no print out 
+               0    | res6  		: 1 = print out output.res6; 0= no print out 
+               0    | res7  		: 1 = print out output.res7; 0= no print out 
+               0    | isubdaily_output :  0 = no print subdaily output; 1 = print out subdaily output for reach and res 
+Special Projects: (not active)      
+               0    |iproject_lst   	: 1 = readin MODIS Land surface temperature 
+         
+
+      

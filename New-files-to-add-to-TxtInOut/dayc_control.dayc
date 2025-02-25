@@ -1,0 +1,7 @@
+1   !tree biomass calculation flag; 0=SWAT, 1=DayCent
+1   !water stress for biomass; 0=SWAT,1=DayCent
+1   !temperature stress for biomass; 0=SWAT,1=DayCent
+1   !LAI calculation method (SWAT or DayCent); 0=SWAT,1=DayCent
+0   !waters stress for LAI; 0=SWAT,1=DayCent
+0   !temperature stress for LAI; 0=SWAT,1=DayCent
+0   !output control; 0=no daily output, 1 = print daily output
